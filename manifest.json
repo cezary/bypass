@@ -1,0 +1,29 @@
+{
+  "name": "Bypass",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Allows you to read paywalled articles",
+  "icons": {
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "*://*.chicagobusiness.com/",
+    "*://*.economist.com/",
+    "*://*.ft.com/",
+    "*://*.hbr.org/",
+    "*://*.latimes.com/",
+    "*://*.law360.com/",
+    "*://*.medscape.com/",
+    "*://*.newyorker.com/",
+    "*://*.nytimes.com/",
+    "*://*.quora.com/",
+    "*://*.telegraph.co.uk/",
+    "*://*.wsj.com/",
+    "webRequest",
+    "webRequestBlocking"
+  ]
+}
