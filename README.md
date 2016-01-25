@@ -15,3 +15,7 @@ soft paywalls by making it look you're visiting from google.
 - [Quora](http://quora.com/)
 - [The Telegraph](http://telegraph.co.uk/)
 - [The Wall Street Journal](http://wsj.com/)
+
+## Install
+
+[Install Bypass here](https://chrome.google.com/webstore/detail/bypass/ekfnpmbmfmlnbphalelfmiodjmbbjlmp?hl=en-US)
