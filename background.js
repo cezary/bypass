@@ -2,6 +2,7 @@
 
 chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var requestHeaders = details.requestHeaders;
+  var tabId = details.tabId;
 
   var setReferer = false;
 
@@ -28,6 +29,16 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
       requestHeader.value = '';
     }
     return requestHeader;
+  });
+
+  // run contentScript inside tab
+  chrome.tabs.executeScript(tabId, {
+    file: 'contentScript.js',
+    runAt: 'document_end'
+  }, function(res) {
+    if (chrome.runtime.lastError || res[0]) {
+      return;
+    }
   });
 
   return { requestHeaders: requestHeaders };
