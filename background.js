@@ -1,5 +1,9 @@
 'use strict';
 
+var blockedRegexes = [
+  /.+:\/\/.+\.tribdss\.com\//
+];
+
 chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var requestHeaders = details.requestHeaders;
   var tabId = details.tabId;
@@ -34,14 +38,20 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   // run contentScript inside tab
   chrome.tabs.executeScript(tabId, {
     file: 'contentScript.js',
-    runAt: 'document_end'
+    runAt: 'document_start'
   }, function(res) {
     if (chrome.runtime.lastError || res[0]) {
       return;
     }
   });
 
-  return { requestHeaders: requestHeaders };
+
+  if (blockedRegexes.some(regex => regex.test(details.url))) {
+    return { cancel: true };
+  } else {
+    return { requestHeaders: requestHeaders };
+  }
+
 }, {
   urls: ['<all_urls>']
 }, ['blocking', 'requestHeaders']);

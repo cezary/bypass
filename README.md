@@ -4,14 +4,22 @@ A chrome extension for viewing articles behind paywalls. Works for sites with
 soft paywalls by making it look you're visiting from google.
 
 ## Supported
+- [The Age](http://theage.com.au/)
+- [The Baltimore Sun](http://baltimoresun.com/)
 - [Crain's Chicago Business](http://chicagobusiness.com/)
+- [Chicago Tribune](http://chicagotribune.com/)
+- [Daily Press](http://dailypress.com/)
 - [The Economist](http://economist.com/)
 - [Financial Times](http://ft.com/)
+- [Hartford Courant](http://courant.com/)
 - [Harvard Business Review](https://hbr.org/)
 - [Los Angeles Times](http://latimes.com/)
 - [Law360](http://law360.com/)
 - [Medscape](http://medscape.com/)
+- [The Morning Call](http://mcall.com/)
 - [The New Yorker](http://newyorker.com/)
+- [OrlandoSentinel](http://orlandosentinel.com/)
+- [SunSentinel](http://sun-sentinel.com/)
 - [Quora](http://quora.com/)
 - [The Telegraph](http://telegraph.co.uk/)
 - [The Wall Street Journal](http://wsj.com/)
