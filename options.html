@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bypass Options</title>
+  <style>
+    #bypass_sites label {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    Selected sites will have their localStorage and cookies cleared on each
+    visit and their referer set to "http://www.google.com/". You should
+    disable sites you have an account with here or else you will be logged out
+    at every visit.
+  </div>
+  <br/>
+  <div id='bypass_sites'>
+  </div>
+  <br/>
+  <div id="status"></div>
+  <div id="error"></div>
+  <br/>
+  <button id="save">Save</button>
+  <script src="options.js"></script>
+</body>
+</html>

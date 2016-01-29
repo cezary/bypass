@@ -6,8 +6,8 @@ soft paywalls by making it look you're visiting from google.
 ## Supported
 - [The Age](http://theage.com.au/)
 - [The Baltimore Sun](http://baltimoresun.com/)
-- [Crain's Chicago Business](http://chicagobusiness.com/)
 - [Chicago Tribune](http://chicagotribune.com/)
+- [Crain's Chicago Business](http://chicagobusiness.com/)
 - [Daily Press](http://dailypress.com/)
 - [The Economist](http://economist.com/)
 - [Financial Times](http://ft.com/)

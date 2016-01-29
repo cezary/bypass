@@ -1,10 +1,91 @@
 'use strict';
 
+var defaultSites = {
+  'The Age': 'theage.com.au',
+  'Baltimore Sun': 'baltimoresun.com',
+  'Crain\'s Chicago Business': 'chicagobusiness.com',
+  'Chicago Tribune': 'chicagotribune.com',
+  'Daily Press': 'dailypress.com',
+  'The Economist': 'economist.com',
+  'Financial Times': 'ft.com',
+  'Hartford Courant': 'courant.com',
+  'Harvard Business Review': 'hbr.org',
+  'Los Angeles Times': 'latimes.com',
+  'Law360': 'law360.com',
+  'Medscape': 'medscape.com',
+  'The Morning Call': 'mcall.com',
+  'The New Yorker': 'newyorker.com',
+  'OrlandoSentinel': 'orlandosentinel.com',
+  'Quora': 'quora.com',
+  'SunSentinel': 'sun-sentinel.com',
+  'The Telegraph': 'telegraph.co.uk',
+  'The Wall Street Journal': 'wsj.com'
+};
+
+function setDefaultOptions() {
+  chrome.storage.sync.set({
+    sites: defaultSites
+  }, function() {
+    //console.log('default options saved');
+  });
+}
+
+// Check whether new version is installed
+chrome.runtime.onInstalled.addListener(function(details){
+    if (details.reason === "install") {
+      setDefaultOptions();
+    } else if (details.reason === "update") {
+        var thisVersion = chrome.runtime.getManifest().version;
+        if (['0.0.1','0.0.2','0.0.3','0.0.4'].indexOf(details.previousVersion) !== -1) {
+          setDefaultOptions();
+        }
+        //console.log("Updated from " + details.previousVersion + " to " + thisVersion + "!");
+    }
+});
+
 var blockedRegexes = [
   /.+:\/\/.+\.tribdss\.com\//
 ];
 
+var enabledSites = [];
+
+// Get the enabled sites
+chrome.storage.sync.get({
+  sites: {}
+}, function(items) {
+  var sites = items.sites;
+  enabledSites = Object.keys(items.sites).map(function(key) {
+    return items.sites[key];
+  });
+});
+
+// Listen for changes to options
+chrome.storage.onChanged.addListener(function(changes, namespace) {
+  var key;
+  for (key in changes) {
+    var storageChange = changes[key];
+    if (key === 'sites') {
+      var sites = storageChange.newValue;
+      enabledSites = Object.keys(sites).map(function(key) {
+        return sites[key];
+      });
+    }
+  }
+});
+
 chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
+  if (blockedRegexes.some(function(regex) { return regex.test(details.url); })) {
+    return { cancel: true };
+  }
+
+  var isEnabled = enabledSites.some(function(enabledSite) {
+    return details.url.indexOf(enabledSite) !== -1;
+  });
+
+  if (!isEnabled) {
+    return;
+  }
+
   var requestHeaders = details.requestHeaders;
   var tabId = details.tabId;
 
@@ -45,13 +126,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
     }
   });
 
-
-  if (blockedRegexes.some(regex => regex.test(details.url))) {
-    return { cancel: true };
-  } else {
-    return { requestHeaders: requestHeaders };
-  }
-
+  return { requestHeaders: requestHeaders };
 }, {
   urls: ['<all_urls>']
 }, ['blocking', 'requestHeaders']);

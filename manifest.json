@@ -1,9 +1,13 @@
 {
   "name": "Bypass",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "manifest_version": 2,
   "description": "Allows you to read paywalled articles",
   "icons": {
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
   },
   "background": {
     "scripts": [
@@ -14,8 +18,8 @@
     "*://*.baltimoresun.com/",
     "*://*.chicagobusiness.com/",
     "*://*.chicagotribune.com/",
-    "*://*.economist.com/",
     "*://*.dailypress.com/",
+    "*://*.economist.com/",
     "*://*.ft.com/",
     "*://*.courant.com/",
     "*://*.hbr.org/",
@@ -32,6 +36,7 @@
     "*://*.tribdss.com/",
     "*://*.sun-sentinel.com/",
     "*://*.wsj.com/",
+    "storage",
     "webRequest",
     "webRequestBlocking"
   ]
