@@ -73,5 +73,21 @@ function renderOptions() {
   });
 }
 
+function selectAll() {
+  var inputEls = Array.from(document.querySelectorAll('input'));
+  inputEls.forEach(function(inputEl) {
+    inputEl.checked = true;
+  });
+}
+
+function selectNone() {
+  var inputEls = Array.from(document.querySelectorAll('input'));
+  inputEls.forEach(function(inputEl) {
+    inputEl.checked = false;
+  });
+}
+
 document.addEventListener('DOMContentLoaded', renderOptions);
 document.getElementById('save').addEventListener('click', save_options);
+document.getElementById('select-all').addEventListener('click', selectAll);
+document.getElementById('select-none').addEventListener('click', selectNone);

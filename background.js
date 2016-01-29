@@ -117,15 +117,17 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
     return requestHeader;
   });
 
-  // run contentScript inside tab
-  chrome.tabs.executeScript(tabId, {
-    file: 'contentScript.js',
-    runAt: 'document_start'
-  }, function(res) {
-    if (chrome.runtime.lastError || res[0]) {
-      return;
-    }
-  });
+  if (tabId !== -1) {
+    // run contentScript inside tab
+    chrome.tabs.executeScript(tabId, {
+      file: 'contentScript.js',
+      runAt: 'document_start'
+    }, function(res) {
+      if (chrome.runtime.lastError || res[0]) {
+        return;
+      }
+    });
+  }
 
   return { requestHeaders: requestHeaders };
 }, {
