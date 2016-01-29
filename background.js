@@ -27,6 +27,7 @@ function setDefaultOptions() {
     sites: defaultSites
   }, function() {
     //console.log('default options saved');
+    chrome.tabs.create({ 'url': 'chrome://extensions/?options=' + chrome.runtime.id });
   });
 }
 
