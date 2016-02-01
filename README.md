@@ -22,7 +22,9 @@ soft paywalls by making it look you're visiting from google.
 - [SunSentinel](http://sun-sentinel.com/)
 - [Quora](http://quora.com/)
 - [The Telegraph](http://telegraph.co.uk/)
-- [The Wall Street Journal](http://wsj.com/)
+- [The Wall Street Journal](http://wsj.com/)*
+
+* [Currently running tests to close paywall work around, may not work.](http://digiday.com/publishers/wall-street-journal-paywall-google/)
 
 ## Install
 

@@ -9,7 +9,6 @@ var defaultSites = {
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
   'Los Angeles Times': 'latimes.com',
-  'Law360': 'law360.com',
   'Medscape': 'medscape.com',
   'The Morning Call': 'mcall.com',
   'The New Yorker': 'newyorker.com',
