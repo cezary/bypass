@@ -1,9 +1,10 @@
 {
   "name": "Bypass",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "manifest_version": 2,
   "description": "Allows you to read paywalled articles",
   "icons": {
+    "128": "bypass.png"
   },
   "options_ui": {
     "page": "options.html",
