@@ -17,6 +17,7 @@ var defaultSites = {
   'OrlandoSentinel': 'orlandosentinel.com',
   'Quora': 'quora.com',
   'SunSentinel': 'sun-sentinel.com',
+  'The Nation': 'thenation.com',
   'The Telegraph': 'telegraph.co.uk',
   'The Wall Street Journal': 'wsj.com'
 };
@@ -44,7 +45,8 @@ chrome.runtime.onInstalled.addListener(function(details){
 });
 
 var blockedRegexes = [
-  /.+:\/\/.+\.tribdss\.com\//
+  /.+:\/\/.+\.tribdss\.com\//,
+  /thenation\.com\/.+\/paywall-script\.php/
 ];
 
 var enabledSites = [];

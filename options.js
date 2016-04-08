@@ -11,6 +11,7 @@ var defaultSites = {
   'Los Angeles Times': 'latimes.com',
   'Medscape': 'medscape.com',
   'The Morning Call': 'mcall.com',
+  'The Nation': 'thenation.com',
   'The New Yorker': 'newyorker.com',
   'OrlandoSentinel': 'orlandosentinel.com',
   'Quora': 'quora.com',
