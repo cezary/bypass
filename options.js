@@ -1,6 +1,7 @@
 var defaultSites = {
   'The Age': 'theage.com.au',
   'Baltimore Sun': 'baltimoresun.com',
+  'Barron\'s': 'barrons.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Chicago Tribune': 'chicagotribune.com',
   'Daily Press': 'dailypress.com',

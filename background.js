@@ -3,6 +3,7 @@
 var defaultSites = {
   'The Age': 'theage.com.au',
   'Baltimore Sun': 'baltimoresun.com',
+  'Barron\'s': 'barrons.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Chicago Tribune': 'chicagotribune.com',
   'Daily Press': 'dailypress.com',
@@ -21,6 +22,10 @@ var defaultSites = {
   'The Telegraph': 'telegraph.co.uk',
   'The Wall Street Journal': 'wsj.com'
 };
+
+var restrictions = {
+  'barrons.com': 'barrons.com/articles'
+}
 
 function setDefaultOptions() {
   chrome.storage.sync.set({
@@ -81,7 +86,15 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
   }
 
   var isEnabled = enabledSites.some(function(enabledSite) {
-    return details.url.indexOf(enabledSite) !== -1;
+
+    var useSite = details.url.indexOf(enabledSite) !== -1;
+
+    if (enabledSite in restrictions) {
+      return useSite && details.url.indexOf(restrictions[enabledSite]) !== -1;
+    }
+
+    return useSite;
+
   });
 
   if (!isEnabled) {
