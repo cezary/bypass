@@ -20,6 +20,7 @@ var defaultSites = {
   'SunSentinel': 'sun-sentinel.com',
   'The Nation': 'thenation.com',
   'The Telegraph': 'telegraph.co.uk',
+  'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com'
 };
 

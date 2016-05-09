@@ -18,6 +18,7 @@ var defaultSites = {
   'Quora': 'quora.com',
   'SunSentinel': 'sun-sentinel.com',
   'The Telegraph': 'telegraph.co.uk',
+  'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com'
 };
 
