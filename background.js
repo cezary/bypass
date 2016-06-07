@@ -15,11 +15,12 @@ var defaultSites = {
   'Los Angeles Times': 'latimes.com',
   'Medscape': 'medscape.com',
   'The Morning Call': 'mcall.com',
+  'The Nation': 'thenation.com',
   'The New Yorker': 'newyorker.com',
   'OrlandoSentinel': 'orlandosentinel.com',
   'Quora': 'quora.com',
   'SunSentinel': 'sun-sentinel.com',
-  'The Nation': 'thenation.com',
+  'The Sydney Morning Herald': 'smh.com.au',
   'The Telegraph': 'telegraph.co.uk',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com'
