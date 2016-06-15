@@ -11,6 +11,7 @@ var defaultSites = {
   'Financial Times': 'ft.com',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
+  'Inc.com': 'inc.com',
   'Los Angeles Times': 'latimes.com',
   'Medscape': 'medscape.com',
   'The Morning Call': 'mcall.com',
