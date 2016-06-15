@@ -1,6 +1,6 @@
 {
   "name": "Bypass",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "manifest_version": 2,
   "description": "Read news articles behind paywalls",
   "icons": {
