@@ -1,6 +1,6 @@
 {
   "name": "Bypass",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "manifest_version": 2,
   "description": "Read news articles behind paywalls",
   "icons": {
@@ -25,6 +25,7 @@
     "*://*.ft.com/",
     "*://*.courant.com/",
     "*://*.hbr.org/",
+    "*://*.inc.com/",
     "*://*.jacksonville.com/",
     "*://*.latimes.com/",
     "*://*.mcall.com/",

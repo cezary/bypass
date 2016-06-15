@@ -14,6 +14,7 @@ soft paywalls by making it look you're visiting from google.
 - [Financial Times](http://ft.com/)
 - [Hartford Courant](http://courant.com/)
 - [Harvard Business Review](https://hbr.org/)
+- [Inc.com](http://inc.com)
 - [Los Angeles Times](http://latimes.com/)
 - [Law360](http://law360.com/)
 - [Medscape](http://medscape.com/)
