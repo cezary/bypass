@@ -31,4 +31,4 @@ soft paywalls by making it look you're visiting from google.
 
 ## Install
 
-[Install Bypass here](https://chrome.google.com/webstore/detail/bypass/ekfnpmbmfmlnbphalelfmiodjmbbjlmp?hl=en-US)
+~~[Install Bypass here](https://chrome.google.com/webstore/detail/bypass/ekfnpmbmfmlnbphalelfmiodjmbbjlmp?hl=en-US)~~ [Taken down](https://twitter.com/czarizard/status/752531837138853888)
