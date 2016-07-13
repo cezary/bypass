@@ -31,4 +31,10 @@ soft paywalls by making it look you're visiting from google.
 
 ## Install
 
-~~[Install Bypass here](https://chrome.google.com/webstore/detail/bypass/ekfnpmbmfmlnbphalelfmiodjmbbjlmp?hl=en-US)~~ [Taken down](https://twitter.com/czarizard/status/752531837138853888)
+~~[Install Bypass here](https://chrome.google.com/webstore/detail/bypass/ekfnpmbmfmlnbphalelfmiodjmbbjlmp?hl=en-US)~~ [Taken down](https://twitter.com/czarizard/status/752531837138853888), follow these instructions to install as a developer.
+
+1. Clone this repo
+2. In Chrome, open the [Extensions page](chrome://extensions/)
+3. Enable Developer Mode by clicking the checkbox at the top
+4. Click 'Load unpacked extension...' button
+5. Navigate to the repo's directory and open it
